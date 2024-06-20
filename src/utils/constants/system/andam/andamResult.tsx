@@ -1,0 +1,25 @@
+import rb from '../../../../assets/img/types/madar/andam/rodeB/photo_2024-05-15_22-51-01.jpg';
+import kb from '../../../../assets/img/types/madar/andam/kab/photo_2024-05-03_02-09-51.jpg';
+import med from '../../../../assets/img/types/madar/andam/med/photo_2024-05-03_02-08-53.jpg';
+import mas from '../../../../assets/img/types/madar/andam/mas/photo_2024-05-03_02-11-21.jpg';
+import tah from '../../../../assets/img/types/madar/andam/tah/photo_2024-05-03_02-09-15.jpg';
+import kis from '../../../../assets/img/types/madar/andam/kise/photo_2024-05-15_22-51-41.jpg';
+import qal from '../../../../assets/img/types/madar/andam/qalb/photo_1_2024-05-03_02-07-53.jpg';
+import rah from '../../../../assets/img/types/madar/andam/rahem/photo_1_2024-05-03_02-08-10.jpg';
+import ri from '../../../../assets/img/types/madar/andam/rieh/photo_2024-05-03_02-09-38.jpg';
+import dar from '../../../../assets/img/types/madar/andam/dariche/photo_2024-05-03_02-10-47.jpg';
+import rk from '../../../../assets/img/types/madar/andam/rodK/photo_2024-05-15_22-51-12.jpg';
+import kl from '../../../../assets/img/types/madar/andam/koli/photo_2024-04-18_00-54-42.jpg';
+
+export const anr_rb = [rb];
+export const anr_kb = [kb];
+export const anr_med = [med];
+export const anr_mas = [mas];
+export const anr_tah = [tah];
+export const anr_kis = [kis];
+export const anr_qal = [qal];
+export const anr_rah = [rah];
+export const anr_ri = [ri];
+export const anr_dar = [dar];
+export const anr_rk = [rk];
+export const anr_kl = [kl];

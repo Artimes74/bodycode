@@ -1,0 +1,77 @@
+import React from 'react';
+import {
+  Dimensions,
+  Image,
+  ImageSourcePropType,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+
+const {width, height} = Dimensions.get('screen');
+const SPACE = 10;
+
+type Props = {
+  item: {
+    name: string;
+    img: ImageSourcePropType | undefined;
+    data: {
+      name: string;
+      img: ImageSourcePropType | undefined;
+      data: {name: string; image: ImageSourcePropType | undefined}[];
+    }[];
+    lastPageData: ImageSourcePropType | undefined;
+  };
+  colum: number;
+  index: number;
+  onPress: (
+    name: string,
+    data: {
+      name: string;
+      img: ImageSourcePropType | undefined;
+      data: {name: string; image: ImageSourcePropType | undefined}[];
+    }[],
+    lastPageData: ImageSourcePropType | undefined,
+  ) => void;
+};
+
+const TypeCard = (props: Props) => {
+  const {item, onPress, colum} = props;
+
+  return (
+    <Pressable
+      onPress={() => {
+        onPress(item.name, item.data, item.lastPageData);
+      }}
+      style={[
+        styles.container,
+        {
+          width: colum !== 0 ? (width / 2) * 0.55 : (width / 2) * 0.85,
+          height: colum !== 0 ? height * 0.14 : height * 0.2,
+          marginVertical: colum !== 0 ? SPACE : SPACE * 2,
+        },
+      ]}>
+      <Image source={item.img} style={styles.img} />
+    </Pressable>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    width: (width / 2) * 0.85,
+    height: height * 0.2,
+    borderRadius: SPACE * 2,
+    marginVertical: SPACE * 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'pink',
+  },
+  img: {
+    width: '100%',
+    height: '100%',
+    borderRadius: SPACE * 2,
+  },
+});
+
+export default TypeCard;
